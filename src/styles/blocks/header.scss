@@ -5,14 +5,14 @@
     $header-padding-x;
 
   &__logo {
-    height: 40px;
-    width: auto;
+    height: $logo-height;
+    width: $logo-width;
     vertical-align: middle;
   }
 
   &__title {
-    margin-left: 16px;
-    font-size: 2rem;
+    margin-left: $title-margin-left;
+    font-size: $title-font-size;
     color: $color-primary;
     font-weight: bold;
     display: inline-block;

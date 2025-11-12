@@ -21,7 +21,7 @@
 }
 
 .card {
-  background: #fff;
+  background: $color-white;
   border-radius: $card-radius;
   box-shadow: $card-shadow;
   transition:
@@ -34,14 +34,14 @@
 
   &__image {
     width: 100%;
-    height: 132px;
+    height: $card-image-height;
     object-fit: cover;
-    border-radius: 8px 8px 0 0;
+    border-radius: $card-image-radius $card-image-radius 0 0;
   }
 
   &__title {
-    font-size: 1.05rem;
-    margin: 18px 0 6px;
+    font-size: $card-title-font-size;
+    margin: $card-title-margin-top 0 $card-title-margin-bottom;
     color: $color-primary;
     transition: color $transition;
     font-weight: 700;
@@ -49,17 +49,17 @@
   }
 
   &__desc {
-    font-size: 0.97rem;
-    margin-bottom: 14px;
+    font-size: $card-desc-font-size;
+    margin-bottom: $card-desc-margin-bottom;
     color: $color-text-secondary;
-    min-height: 38px;
+    min-height: $card-desc-min-height;
     text-align: center;
   }
 
   &__actions {
     display: flex;
-    gap: 12px;
-    margin-bottom: 14px;
+    gap: $card-actions-gap;
+    margin-bottom: $card-actions-margin-bottom;
     width: 100%;
     justify-content: center;
   }
@@ -69,8 +69,8 @@
     padding: $button-padding-y $button-padding-x;
     border-radius: $button-radius;
     background: $color-accent;
-    color: #fff;
-    border: $button-border-width solid transparent; // Zarezerwowane miejsce na border do hovera
+    color: $color-white;
+    border: $button-border-width solid transparent;
     cursor: pointer;
     font-weight: 600;
     transition:
@@ -79,14 +79,14 @@
       border-color $transition;
     outline: none;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: $button-font-size;
   }
 
   &:hover,
   &.is-hovered {
     transform: scale(1.2);
     z-index: 1;
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: $card-hover-shadow;
 
     .card__title {
       color: $color-title-hover;
@@ -94,7 +94,7 @@
 
     .card__button,
     [data-qa='card-hover'] {
-      background: #fff;
+      background: $color-white;
       color: $color-accent;
       border-color: $color-accent;
     }

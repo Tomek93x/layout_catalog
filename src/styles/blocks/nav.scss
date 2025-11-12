@@ -7,14 +7,14 @@
   &__link {
     color: $color-primary;
     text-decoration: none;
-    font-size: 1.1rem;
-    padding: 8px 0;
+    font-size: $nav-link-font-size;
+    padding: $nav-link-padding-y $nav-link-padding-x;
     position: relative;
     transition: color $transition;
 
     &.is-active {
       font-weight: bold;
-      border-bottom: 2px solid $color-accent;
+      border-bottom: $nav-link-border-width solid $color-accent;
     }
 
     &:hover,
