@@ -1,0 +1,11 @@
+.stars {
+  display: flex;
+  gap: 2px;
+
+  &__star {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

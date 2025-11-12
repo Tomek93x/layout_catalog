@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  gap: 28px;
+
+  &__link {
+    color: $color-primary;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    position: relative;
+    transition: color $transition;
+
+    &.is-active {
+      font-weight: bold;
+      border-bottom: 2px solid $color-accent;
+    }
+
+    &:hover,
+    &[data-qa='nav-hover'] {
+      color: $color-accent !important;
+    }
+  }
+}
