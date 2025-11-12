@@ -1,5 +1,8 @@
+@import '../variables';
+
 .header {
-  padding: 32px 40px 24px;
+  padding: $header-padding-y $header-padding-x $header-padding-bottom
+    $header-padding-x;
 
   &__logo {
     height: 40px;

@@ -1,6 +1,8 @@
+@import '../variables';
+
 .nav {
   display: flex;
-  gap: 28px;
+  gap: $nav-gap-x;
 
   &__link {
     color: $color-primary;
@@ -17,7 +19,7 @@
 
     &:hover,
     &[data-qa='nav-hover'] {
-      color: $color-accent !important;
+      color: $color-accent;
     }
   }
 }

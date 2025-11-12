@@ -5,7 +5,7 @@
 @import './blocks/card';
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f7fb; // przykładowe tło
+  font-family: Roboto, Arial, sans-serif;
+  background: $color-background;
   margin: 0;
 }

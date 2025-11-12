@@ -3,8 +3,8 @@
 .catalog {
   display: grid;
   grid-template-columns: 1fr;
-  gap: $gap-y $gap-x;
-  padding: $padding-y $padding-x;
+  gap: $card-gap-y $card-gap-x;
+  padding: $catalog-padding-y $catalog-padding-x;
   justify-content: center;
 
   @media (min-width: 488px) {
@@ -22,8 +22,8 @@
 
 .card {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border-radius: $card-radius;
+  box-shadow: $card-shadow;
   transition:
     transform $transition,
     box-shadow $transition;
@@ -51,7 +51,7 @@
   &__desc {
     font-size: 0.97rem;
     margin-bottom: 14px;
-    color: #495057;
+    color: $color-text-secondary;
     min-height: 38px;
     text-align: center;
   }
@@ -66,16 +66,17 @@
 
   &__button,
   [data-qa='card-hover'] {
-    padding: 8px 18px;
-    border-radius: 6px;
+    padding: $button-padding-y $button-padding-x;
+    border-radius: $button-radius;
     background: $color-accent;
     color: #fff;
-    border: none;
+    border: $button-border-width solid transparent; // Zarezerwowane miejsce na border do hovera
     cursor: pointer;
     font-weight: 600;
     transition:
       background $transition,
-      color $transition;
+      color $transition,
+      border-color $transition;
     outline: none;
     text-decoration: none;
     font-size: 1rem;
@@ -95,7 +96,7 @@
     [data-qa='card-hover'] {
       background: #fff;
       color: $color-accent;
-      border: 1px solid $color-accent;
+      border-color: $color-accent;
     }
   }
 }
